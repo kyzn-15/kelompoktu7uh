@@ -1,0 +1,1270 @@
+:root{
+    --primary:#AD0302;
+    --bg:#FBF0E8;
+    --yellow: rgb(187, 160, 10);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    min-height: 2000px;
+    background-color: var(--bg);
+}
+
+nav.navbar {
+    padding-bottom: 0px;
+    padding-top: 0.5rem;
+    background-color: var(--bg);
+    /* height: 4rem; */
+}
+
+div.navbar-nav {
+    display: flex;
+    justify-content: center;
+}
+
+a.navbar-link.active{
+    /* text-align: center; */
+    color: black;
+    font-weight: 700;
+    justify-content: space-between;
+    margin-top: 0.375rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a.navbar-link.active:hover {
+    color: var(--primary);
+}
+
+a.navbar-link.active::after {
+    text-decoration: underline;
+    color: var(--primary);
+}
+
+a.navbar-brand {
+    color: var(--primary);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    /* padding-top: 0px; */
+    margin-bottom: 0.6rem;
+}
+
+button.navbar-toggler {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.4rem;
+}
+
+img#logo {
+    height: 3.75rem;
+    width: 4.094rem;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+section.banner{
+	margin-top: 3rem;
+    --size: 100vw;
+	position: relative;
+	max-width: var(--size);
+	height: calc(var(--size)/1.6);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: gray url("Banner.png") center / cover no-repeat;
+}
+
+section.thankyou{
+    --size: 75vw;
+    margin-top: 3rem;
+	position: relative;
+	min-width: var(--size);
+	height: calc(var(--size)/2);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: gray url("thankyou.png") center / cover no-repeat;
+}
+
+.gradient-banner {
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	bottom: 0;
+	height: 2.5rem;
+	width: 100%;
+	background: linear-gradient(to bottom,rgba(0,0,0,0), var(--bg));
+}
+
+div.space{
+    background-color: var(--bg);
+}
+
+section.stars
+{
+    position: relative;
+    width: 100%;
+    padding-top: 1.5rem;
+    padding-bottom: 3.4rem;
+    overflow: hidden;
+    background: var(--bg);
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    flex-direction: column;
+}
+section.stars2
+{
+    position: relative;
+    width: 100%;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: var(--bg);
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    flex-direction: column;
+}
+
+section.stars .star
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    animation: animate 8s ease-in-out infinite,
+               backgroundmove 16s linear infinite;
+    
+}
+section.stars2 .star
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    animation: animate 8s ease-in-out infinite,
+               backgroundmove 16s linear infinite;
+    
+}
+section.stars .star.star1
+{
+    animation-delay: 0s;
+    background: url(https://media.discordapp.net/attachments/1156569141449326616/1156934371161428029/1695905040105.png?ex=6516c698&is=65157518&hm=28d818cfeea5bcdcf880671b2b2dd94227f22e663e09379cf6624f36acd301e0&=&width=1177&height=662);
+}
+section.stars .star.star2
+{
+    animation-delay: -1s;
+    background: url(https://media.discordapp.net/attachments/1156569141449326616/1156934627085275176/1695905099726.png?ex=6516c6d5&is=65157555&hm=0c1ce68d173a6d488a58ba950b10cdcc15866d563b0f2cd8c11f8722fb0e7e09&=&width=1177&height=662);
+}
+section.stars .star.star3
+{
+    animation-delay: -2s;
+    background: url(https://cdn.discordapp.com/attachments/1156569141449326616/1156937244293214208/1695905725241.png?ex=6516c945&is=651577c5&hm=290cfddf722c9de72182be93f14631b53947b7039366250f44e8e45125ba50a8&);
+}
+
+section.stars2 .star.star1
+{
+    animation-delay: 0s;
+    background: url(https://media.discordapp.net/attachments/1156569141449326616/1156934371161428029/1695905040105.png?ex=6516c698&is=65157518&hm=28d818cfeea5bcdcf880671b2b2dd94227f22e663e09379cf6624f36acd301e0&=&width=1177&height=662);
+}
+section.stars2 .star.star2
+{
+    animation-delay: -1s;
+    background: url(https://media.discordapp.net/attachments/1156569141449326616/1156934627085275176/1695905099726.png?ex=6516c6d5&is=65157555&hm=0c1ce68d173a6d488a58ba950b10cdcc15866d563b0f2cd8c11f8722fb0e7e09&=&width=1177&height=662);
+}
+section.stars2 .star.star3
+{
+    animation-delay: -2s;
+    background: url(https://cdn.discordapp.com/attachments/1156569141449326616/1156937244293214208/1695905725241.png?ex=6516c945&is=651577c5&hm=290cfddf722c9de72182be93f14631b53947b7039366250f44e8e45125ba50a8&);
+}
+
+@keyframes animate
+{
+    0%,20%,40%,60%,80%,100%
+    {
+        opacity: 0;
+    }
+
+    10%,30%,50%,70%,90%
+    {
+        opacity: 1;
+    }
+}
+@keyframes backgroundmove
+{
+    0%
+    {
+        transform: scale(1);
+    }
+    100%
+    {
+        transform: scale(2);
+}
+}
+
+
+section.anggota {
+    /* background-color: salmon; */
+    background-color: var(--bg);
+}
+
+div.header h1 {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 3rem;
+    font-size: 4rem;
+}
+
+div.top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30rem;
+    width: 50rem;
+    background-color: gray;
+    margin: 0px auto;
+    margin-bottom: 4rem;
+    background-image: url(Minions.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 2rem;
+    box-shadow: -0.063rem 0.063rem 1.25rem 0.063rem var(--yellow);
+
+}
+
+
+.ganjil {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding-bottom: 4rem;
+    justify-content: space-evenly;
+    animation: floating 3s ease-in-out infinite;
+	
+}
+
+.genap {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding-bottom: 4rem;
+    justify-content: space-evenly;
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 35px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+h2.subheading {
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+div.content {
+    margin-left: 0.15rem;
+}
+
+section.anggota div.ganjil #gambar-1 {
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+    background-image: url(kevin.png);
+    background-color: gray;
+    background-position: center;
+    background-size: cover;
+    box-shadow: -0.063rem 0.063rem 1.25rem 0.063rem var(--yellow);
+    margin-left: rem;
+}
+	
+
+section.anggota div.genap #gambar-2 {
+	height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+    background-image: url(carlos.png);
+    background-color: gray;
+    background-position: center;
+    background-size: cover;
+    box-shadow: -0.063rem 0.063rem 1.25rem 0.063rem var(--yellow);
+}
+section.anggota div.ganjil #gambar-3 {
+	height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+    background-image: url(artha.png);
+    background-color: gray;
+    background-position: center;
+    background-size: cover;
+    box-shadow: -0.063rem 0.063rem 1.25rem 0.063rem var(--yellow);
+}
+section.anggota div.genap #gambar-4 {
+	height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+    background-image: url(justin.png);
+    background-color: gray;
+    background-position: center;
+    background-size: cover;
+    box-shadow: -0.063rem 0.063rem 1.25rem 0.063rem var(--yellow);
+}
+section.anggota div.ganjil #gambar-5 {
+	height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+    background-image: url(daniele.png);
+    background-color: gray;
+    background-position: center;
+    background-size: cover;
+    box-shadow: -0.063rem 0.063rem 1.25rem 0.063rem var(--yellow);
+}
+section.anggota div.genap #gambar-6 {
+	height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+    background-image: url(pembersih.png);
+    background-color: gray;
+    background-position: center;
+    background-size: cover;
+    box-shadow: -0.063rem 0.063rem 1.25rem 0.063rem var(--yellow);
+}
+
+div.genap#end {
+    padding-bottom: 0px;
+}
+
+section.pembahasan {
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section.pembahasan div.soal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: salmon; */
+    width: 70vw;
+    height: 34vh;
+    border: 7px solid var(--primary);
+    border-radius: 0.5rem;
+    margin-bottom: 3rem;
+}
+
+section.pembahasan div.soal h5 {
+    font-size: 2rem;
+    text-wrap: wrap;
+    text-align: justify;
+    margin: 3rem;
+}
+
+section.pembahasan div.jawaban {
+    /* background-color: skyblue; */
+    width: 70vw;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+section.pembahasan div.jawaban-2 {
+    /* background-color: skyblue; */
+    width: 70vw;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+}
+
+
+div.img#pembahasan1 {
+    height: calc(35vw/1.6);
+    width: 25vw;
+    border-radius: 5%;
+    background-image: url(https://media.discordapp.net/attachments/1156569141449326616/1156942014978474014/download_4.jpeg?ex=651b6af7&is=651a1977&hm=426e93e08f1ac9903f892f056e908cc930f43ce962217e6a3dece6563d51f682&=&width=411&height=588);
+    background-color: gray;
+    background-position: center;
+    background-size: cover;
+    /* box-shadow: -0.063rem 0.063rem 1.25rem 0.063rem var(--yellow); */
+}
+
+div.img#pembahasan2 {
+    height: calc(35vw/1.6);
+    width: 25vw;
+    border-radius: 5%;
+    background-image: url(https://media.discordapp.net/attachments/1156569141449326616/1157321411153645689/Coroflot_Design_Jobs__Portfolios.jpeg?ex=65182f0e&is=6516dd8e&hm=c5d94ce37661935c0601258f24acd7002d1a123402efec49f50edf7cd1899d66&=&width=472&height=662);
+    background-color: gray;
+    background-position: center;
+    background-size: cover;
+    /* box-shadow: -0.063rem 0.063rem 1.25rem 0.063rem var(--yellow); */
+}
+
+section.pembahasan div.jawaban div.text {
+    /* background-color: yellowgreen; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    width: 90%;
+}
+
+section.pembahasan div.jawaban-2 div.text {
+    /* background-color: yellowgreen; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    width: 90%;
+}
+
+section.pembahasan div.jawaban div.text p{
+    font-size: 1.5rem;
+    text-align: justify;
+    font-weight: 600;
+    text-wrap: wrap;
+}
+
+section.pembahasan div.jawaban-2 div.text p{
+    font-size: 1.5rem;
+    text-align: justify;
+    font-weight: 600;
+    text-wrap: wrap;
+}
+
+div.studi-kasus {
+    width: 70vw;
+    margin-bottom: 5rem;
+}
+
+div.studi-wrapper {
+    display: flex;
+    flex-direction:row-reverse ;
+}
+
+div.img#studikasus-1 {
+    height: calc(35vw/1.6);
+    min-width: 19.5vw;
+    border-radius: 5%;
+    background-image: url(https://cdn.discordapp.com/attachments/1156569141449326616/1157309875139907634/blm.jpg?ex=651b7010&is=651a1e90&hm=80b6d12deaf3bd15201c2785150676d72a61ff7ac75ff26fd22f7c7df08a6ae9&);
+    background-color: gray;
+    background-position: center;
+    background-size: cover;
+}
+
+div.img#studikasus-2 {
+    height: calc(35vw/1.6);
+    min-width: 19.5vw;
+    border-radius: 5%;
+    background-image: url(https://cdn.discordapp.com/attachments/1156569141449326616/1158388921537941544/surya_darmadi.jpeg?ex=651c1140&is=651abfc0&hm=2ca1838b3338c545c1cb0a033747d07c3f16054847444d186eb4ec9c9126acf5&);
+    background-color: gray;
+    background-position: 50% 10%;
+    background-size: cover;
+}
+
+div.studi-kasus div.heading {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+div.studi-kasus div.heading h2 {
+    color: var(--primary);
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+div.studi-kasus div.isi {
+    margin-right: 1rem;
+}
+
+div.studi-kasus div.isi p {
+    font-size: 1.5rem;
+    text-align: justify;
+    font-weight: 600;
+    text-wrap: wrap;
+}
+
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--primary);
+    padding-top: 2rem;
+    width: 100%;
+}
+
+div.footer-img{
+    background-color: var(--bg);
+    display: flex;
+    /* height: 122vh; */
+}
+
+img.footer-divider {
+    max-width: 100%;
+    
+}
+
+
+
+div.footer h1 {
+    font-weight: bold;
+    color: white;
+    text-shadow: white 1px 0px 7px;
+}
+
+div.footer-bottom {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+footer p{
+    color: white;
+    text-shadow: white 1px 0px 10px;
+}
+
+footer div.footer-top img#footer {
+    height: 200px;
+    width: 200px;
+    border: 3px solid white;
+    border-radius: 50%;
+    margin: 0px auto;
+    margin-bottom: 1.3rem;
+    box-shadow: -0.063rem 0.063rem 1.25rem 0.063rem white;
+}
+
+
+
+@media screen and (max-width : 850px) {
+    section.anggota div.top {
+        width: 80vw;
+    }
+
+    section.anggota div.ganjil #gambar-1 {
+        height: 12rem;
+        width: 12rem;
+        margin-bottom: 2rem;
+        border-radius: 50%;
+        background-image: url(kevin.png);
+        background-color: gray;
+        background-position: center;
+        background-size: cover;
+        box-shadow: -0.063rem 0.063rem 1.25rem 0.063rem var(--yellow);
+        margin-left: rem;
+    }
+        
+    
+    section.anggota div.genap #gambar-2 {
+        height: 12rem;
+        width: 12rem;
+        margin-bottom: 2rem;
+        border-radius: 50%;
+        background-image: url(carlos.png);
+        background-color: gray;
+        background-position: center;
+        background-size: cover;
+        box-shadow: -0.063rem 0.063rem 1.25rem 0.063rem var(--yellow);
+    }
+    section.anggota div.ganjil #gambar-3 {
+        height: 12rem;
+        width: 12rem;
+        margin-bottom: 2rem;
+        border-radius: 50%;
+        background-image: url(artha.png);
+        background-color: gray;
+        background-position: center;
+        background-size: cover;
+        box-shadow: -0.063rem 0.063rem 1.25rem 0.063rem var(--yellow);
+    }
+    section.anggota div.genap #gambar-4 {
+        height: 12rem;
+        width: 12rem;
+        margin-bottom: 2rem;
+        border-radius: 50%;
+        background-image: url(justin.png);
+        background-color: gray;
+        background-position: center;
+        background-size: cover;
+        box-shadow: -0.063rem 0.063rem 1.25rem 0.063rem var(--yellow);
+    }
+    section.anggota div.ganjil #gambar-5 {
+        height: 12rem;
+        width: 12rem;
+        margin-bottom: 2rem;
+        border-radius: 50%;
+        background-image: url(daniele.png);
+        background-color: gray;
+        background-position: center;
+        background-size: cover;
+        box-shadow: -0.063rem 0.063rem 1.25rem 0.063rem var(--yellow);
+    }
+    section.anggota div.genap #gambar-6 {
+        height: 12rem;
+        width: 12rem;
+        margin-bottom: 2rem;
+        border-radius: 50%;
+        background-image: url(pembersih.png);
+        background-color: gray;
+        background-position: center;
+        background-size: cover;
+        box-shadow: -0.063rem 0.063rem 1.25rem 0.063rem var(--yellow);
+    }
+    
+    
+    div.jawaban {
+        flex-direction: column-reverse;
+    }
+    
+    section.pembahasan div.jawaban-2 {
+        /* background-color: skyblue; */
+        width: 70vw;
+        display: flex;
+        margin-bottom: 5rem;
+        flex-direction: column-reverse;
+    }
+
+    div.img#pembahasan1 {
+        height: 35vh;
+        width: 60vw;
+        border-radius: 5%;
+        background-color: gray;
+        background-position: center;
+        background-size: cover;
+        margin: 0px auto;
+        /* box-shadow: -0.063rem 0.063rem 1.25rem 0.063rem var(--yellow); */
+    }
+    
+    div.img#pembahasan2 {
+        height: 35vh;
+        width: 60vw;
+        border-radius: 5%;
+        background-color: gray;
+        background-position: center;
+        background-size: cover;
+        margin: 0px auto;
+        /* box-shadow: -0.063rem 0.063rem 1.25rem 0.063rem var(--yellow); */
+    }
+
+    div.studi-wrapper {
+        flex-direction: column-reverse;
+    }
+
+    div.img#studikasus-1 {
+        height: 35vh;
+        width: 60vw;
+        border-radius: 5%;
+        background-image: url(https://media.discordapp.net/attachments/1156569141449326616/1157309875139907634/blm.jpg?ex=651b7010&is=651a1e90&hm=80b6d12deaf3bd15201c2785150676d72a61ff7ac75ff26fd22f7c7df08a6ae9&=&width=662&height=662);
+        background-color: gray;
+        background-position: center;
+        background-size: cover;
+        margin: 0px auto;
+    }
+    
+    div.img#studikasus-2 {
+        height: 35vh;
+        width: 60vw;
+        border-radius: 5%;
+        background-image: url(https://media.discordapp.net/attachments/1156569141449326616/1158388921537941544/surya_darmadi.jpeg?ex=651c1140&is=651abfc0&hm=2ca1838b3338c545c1cb0a033747d07c3f16054847444d186eb4ec9c9126acf5&=&width=372&height=662);
+        background-color: gray;
+        background-position: 50% 10%;
+        background-size: cover;
+        margin: 0px auto;
+    }
+
+}
+
+@media screen and (max-width : 740px) {
+    section.banner{
+        margin-top: 4.5rem;
+        --size: 100vw;
+        position: relative;
+        max-width: var(--size);
+        height: calc(var(--size)/1.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: gray url("Banner.png") center / cover no-repeat;
+    }
+
+    section.thankyou{
+        --size: 90vw;
+        /* margin-top: 1rem; */
+        position: relative;
+        min-width: var(--size);
+        height: calc(var(--size)/1.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: gray url("thankyou.png") center / cover no-repeat;
+    }
+
+
+    
+    div.top{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 25rem;
+        width: 18rem;
+        background-color: gray;
+        margin: 0px auto;
+        margin-bottom: 4rem;
+        background-image: url(Minions.png);
+        background-position: center;
+        background-size: cover;
+        border-radius: 5%;
+        box-shadow: -0.063rem 0.063rem 1.25rem 0.063rem var(--yellow);
+     }
+
+    div.header h1 {
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        color: var(--primary);
+        margin-bottom: 3rem;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    h2.subheading {
+        color: var(--primary);
+        font-weight: bold;
+        font-size: 1.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    div.ganjil, div.genap {
+        flex-direction: column-reverse;
+        max-width: 100vw;
+    }
+
+    div.content {
+        max-width: 85vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px auto;
+    }
+
+    div.content h5 {
+        text-wrap: wrap;
+        text-align: justify;
+    }
+
+    
+    section.anggota div.ganjil #gambar-1 {
+        height: 15rem;
+        width: 15rem;
+        margin-bottom: 2rem;
+        border-radius: 50%;
+        background-image: url(kevin.png);
+        background-color: gray;
+        background-position: center;
+        background-size: cover;
+        box-shadow: -0.063rem 0.063rem 1.25rem 0.063rem var(--yellow);
+        margin-left: rem;
+    }
+        
+    
+    section.anggota div.genap #gambar-2 {
+        height: 15rem;
+        width: 15rem;
+        margin-bottom: 2rem;
+        border-radius: 50%;
+        background-image: url(carlos.png);
+        background-color: gray;
+        background-position: center;
+        background-size: cover;
+        box-shadow: -0.063rem 0.063rem 1.25rem 0.063rem var(--yellow);
+    }
+    section.anggota div.ganjil #gambar-3 {
+        height: 15rem;
+        width: 15rem;
+        margin-bottom: 2rem;
+        border-radius: 50%;
+        background-image: url(artha.png);
+        background-color: gray;
+        background-position: center;
+        background-size: cover;
+        box-shadow: -0.063rem 0.063rem 1.25rem 0.063rem var(--yellow);
+    }
+    section.anggota div.genap #gambar-4 {
+        height: 15rem;
+        width: 15rem;
+        margin-bottom: 2rem;
+        border-radius: 50%;
+        background-image: url(justin.png);
+        background-color: gray;
+        background-position: center;
+        background-size: cover;
+        box-shadow: -0.063rem 0.063rem 1.25rem 0.063rem var(--yellow);
+    }
+    section.anggota div.ganjil #gambar-5 {
+        height: 15rem;
+        width: 15rem;
+        margin-bottom: 2rem;
+        border-radius: 50%;
+        background-image: url(daniele.png);
+        background-color: gray;
+        background-position: center;
+        background-size: cover;
+        box-shadow: -0.063rem 0.063rem 1.25rem 0.063rem var(--yellow);
+    }
+    section.anggota div.genap #gambar-6 {
+        height: 15rem;
+        width: 15rem;
+        margin-bottom: 2rem;
+        border-radius: 50%;
+        background-image: url(pembersih.png);
+        background-color: gray;
+        background-position: center;
+        background-size: cover;
+        box-shadow: -0.063rem 0.063rem 1.25rem 0.063rem var(--yellow);
+    }
+
+
+    section.pembahasan div.soal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: salmon; */
+        width: 80vw;
+        height: 35vh;
+        border: 0.438rem solid var(--primary);
+        border-radius: 0.5rem;
+        margin-bottom: 3rem;
+    }
+    
+    section.pembahasan div.soal h5 {
+        font-size: 1.5rem;
+        text-wrap: wrap;
+        text-align: center;
+        margin: 2rem;
+    }
+    
+    div.jawaban {
+        flex-direction: column-reverse;
+    }
+    
+    section.pembahasan div.jawaban-2 {
+        /* background-color: skyblue; */
+        width: 70vw;
+        display: flex;
+        margin-bottom: 5rem;
+        flex-direction: column-reverse;
+    }
+
+    div.studi-wrapper {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.studi-wrapper div.isi {
+        margin: 0px;
+    }
+
+    div.studi-wrapper div.isi p {
+        font-size: 1rem;
+        text-align: justify;
+        font-weight: 600;
+        text-wrap: wrap;
+    }
+    
+
+    div.img#studikasus-1 {
+        height: 35vh;
+        width: 60vw;
+        border-radius: 5%;
+        background-image: url(https://media.discordapp.net/attachments/1156569141449326616/1157309875139907634/blm.jpg?ex=651b7010&is=651a1e90&hm=80b6d12deaf3bd15201c2785150676d72a61ff7ac75ff26fd22f7c7df08a6ae9&=&width=662&height=662);
+        background-color: gray;
+        background-position: center;
+        background-size: cover;
+        margin: 0px auto;
+    }
+    
+    div.img#studikasus-2 {
+        height: 35vh;
+        width: 60vw;
+        border-radius: 5%;
+        background-image: url(https://media.discordapp.net/attachments/1156569141449326616/1158388921537941544/surya_darmadi.jpeg?ex=651c1140&is=651abfc0&hm=2ca1838b3338c545c1cb0a033747d07c3f16054847444d186eb4ec9c9126acf5&=&width=372&height=662);
+        background-color: gray;
+        background-position: 50% 10%;
+        background-size: cover;
+        margin: 0px auto;
+    }
+
+    div.img#pembahasan1 {
+        height: 35vh;
+        width: 60vw;
+        border-radius: 5%;
+        background-image: url(https://media.discordapp.net/attachments/1156569141449326616/1156942014978474014/download_4.jpeg?ex=651b6af7&is=651a1977&hm=426e93e08f1ac9903f892f056e908cc930f43ce962217e6a3dece6563d51f682&=&width=462&height=662);
+        background-color: gray;
+        background-position: center;
+        background-size: cover;
+        margin: 0px auto;
+        /* box-shadow: -0.063rem 0.063rem 1.25rem 0.063rem var(--yellow); */
+    }
+    
+    div.img#pembahasan2 {
+        height: 35vh;
+        width: 60vw;
+        border-radius: 5%;
+        background-image: url(https://media.discordapp.net/attachments/1156569141449326616/1157321411153645689/Coroflot_Design_Jobs__Portfolios.jpeg?ex=65182f0e&is=6516dd8e&hm=c5d94ce37661935c0601258f24acd7002d1a123402efec49f50edf7cd1899d66&=&width=472&height=662);
+        background-color: gray;
+        background-position: center;
+        background-size: cover;
+        margin: 0px auto;
+        /* box-shadow: -0.063rem 0.063rem 1.25rem 0.063rem var(--yellow); */
+    }
+
+    
+    section.pembahasan div.jawaban div.text {
+        /* background-color: yellowgreen; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px auto;
+        width: 90%;
+    }
+    section.pembahasan div.jawaban div.text p{
+        font-size: 1rem;
+        text-align: justify;
+        font-weight: 600;
+        text-wrap: wrap;
+    }
+    
+    section.pembahasan div.jawaban-2 div.text {
+        /* background-color: yellowgreen; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px auto;
+        width: 90%;
+    }
+    section.pembahasan div.jawaban-2 div.text p{
+        font-size: 1rem;
+        text-align: justify;
+        font-weight: 600;
+        text-wrap: wrap;
+    }
+}
+
+@media screen and (max-width : 590px) {
+    
+    section.banner{
+        margin-top: 4.5rem;
+        --size: 100vw;
+        position: relative;
+        max-width: var(--size);
+        height: calc(var(--size)/1.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: gray url("Banner.png") center / cover no-repeat;
+    }
+
+    section.thankyou{
+        --size: 90vw;
+        /* margin-top: 1rem; */
+        position: relative;
+        min-width: var(--size);
+        height: calc(var(--size)/1.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: gray url("thankyou.png") center / cover no-repeat;
+    }
+
+
+    
+    div.top{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 25rem;
+        width: 18rem;
+        background-color: gray;
+        margin: 0px auto;
+        margin-bottom: 4rem;
+        background-image: url(Minions.png);
+        background-position: center;
+        background-size: cover;
+        border-radius: 5%;
+        box-shadow: -0.063rem 0.063rem 1.25rem 0.063rem var(--yellow);
+     }
+
+    div.header h1 {
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        color: var(--primary);
+        margin-bottom: 3rem;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    h2.subheading {
+        color: var(--primary);
+        font-weight: bold;
+        font-size: 1.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    div.ganjil, div.genap {
+        flex-direction: column-reverse;
+        max-width: 100vw;
+    }
+
+    div.content {
+        max-width: 85vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px auto;
+    }
+
+    div.content h5 {
+        text-wrap: wrap;
+        text-align: justify;
+    }
+
+    
+    section.anggota div.ganjil #gambar-1 {
+        height: 15rem;
+        width: 15rem;
+        margin-bottom: 2rem;
+        border-radius: 50%;
+        background-image: url(kevin.png);
+        background-color: gray;
+        background-position: center;
+        background-size: cover;
+        box-shadow: -0.063rem 0.063rem 1.25rem 0.063rem var(--yellow);
+        margin-left: rem;
+    }
+        
+    
+    section.anggota div.genap #gambar-2 {
+        height: 15rem;
+        width: 15rem;
+        margin-bottom: 2rem;
+        border-radius: 50%;
+        background-image: url(carlos.png);
+        background-color: gray;
+        background-position: center;
+        background-size: cover;
+        box-shadow: -0.063rem 0.063rem 1.25rem 0.063rem var(--yellow);
+    }
+    section.anggota div.ganjil #gambar-3 {
+        height: 15rem;
+        width: 15rem;
+        margin-bottom: 2rem;
+        border-radius: 50%;
+        background-image: url(artha.png);
+        background-color: gray;
+        background-position: center;
+        background-size: cover;
+        box-shadow: -0.063rem 0.063rem 1.25rem 0.063rem var(--yellow);
+    }
+    section.anggota div.genap #gambar-4 {
+        height: 15rem;
+        width: 15rem;
+        margin-bottom: 2rem;
+        border-radius: 50%;
+        background-image: url(justin.png);
+        background-color: gray;
+        background-position: center;
+        background-size: cover;
+        box-shadow: -0.063rem 0.063rem 1.25rem 0.063rem var(--yellow);
+    }
+    section.anggota div.ganjil #gambar-5 {
+        height: 15rem;
+        width: 15rem;
+        margin-bottom: 2rem;
+        border-radius: 50%;
+        background-image: url(daniele.png);
+        background-color: gray;
+        background-position: center;
+        background-size: cover;
+        box-shadow: -0.063rem 0.063rem 1.25rem 0.063rem var(--yellow);
+    }
+    section.anggota div.genap #gambar-6 {
+        height: 15rem;
+        width: 15rem;
+        margin-bottom: 2rem;
+        border-radius: 50%;
+        background-image: url(pembersih.png);
+        background-color: gray;
+        background-position: center;
+        background-size: cover;
+        box-shadow: -0.063rem 0.063rem 1.25rem 0.063rem var(--yellow);
+    }
+
+
+    section.pembahasan div.soal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: salmon; */
+        width: 80vw;
+        height: 35vh;
+        border: 0.438rem solid var(--primary);
+        border-radius: 0.5rem;
+        margin-bottom: 3rem;
+    }
+    
+    section.pembahasan div.soal h5 {
+        font-size: 1.5rem;
+        text-wrap: wrap;
+        text-align: center;
+        margin: 2rem;
+    }
+    
+    div.jawaban {
+        flex-direction: column-reverse;
+    }
+    
+    section.pembahasan div.jawaban-2 {
+        /* background-color: skyblue; */
+        width: 70vw;
+        display: flex;
+        margin-bottom: 5rem;
+        flex-direction: column-reverse;
+    }
+
+    div.studi-wrapper {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.studi-wrapper div.isi {
+        margin: 0px;
+        width: 65vw;
+    }
+
+    div.studi-wrapper div.isi p {
+        font-size: 1rem;
+        text-align: justify;
+        font-weight: 600;
+        text-wrap: wrap;
+    }
+    
+
+    div.img#studikasus-1 {
+        height: 35vh;
+        width: 60vw;
+        border-radius: 5%;
+        background-image: url(https://media.discordapp.net/attachments/1156569141449326616/1157309875139907634/blm.jpg?ex=651b7010&is=651a1e90&hm=80b6d12deaf3bd15201c2785150676d72a61ff7ac75ff26fd22f7c7df08a6ae9&=&width=662&height=662);
+        background-color: gray;
+        background-position: center;
+        background-size: cover;
+        margin: 0px auto;
+    }
+    
+    div.img#studikasus-2 {
+        height: 35vh;
+        width: 60vw;
+        border-radius: 5%;
+        background-image: url(https://media.discordapp.net/attachments/1156569141449326616/1158388921537941544/surya_darmadi.jpeg?ex=651c1140&is=651abfc0&hm=2ca1838b3338c545c1cb0a033747d07c3f16054847444d186eb4ec9c9126acf5&=&width=372&height=662);
+        background-color: gray;
+        background-position: 50% 10%;
+        background-size: cover;
+        margin: 0px auto;
+    }
+
+    div.img#pembahasan1 {
+        height: 35vh;
+        width: 60vw;
+        border-radius: 5%;
+        background-image: url(https://media.discordapp.net/attachments/1156569141449326616/1156942014978474014/download_4.jpeg?ex=651b6af7&is=651a1977&hm=426e93e08f1ac9903f892f056e908cc930f43ce962217e6a3dece6563d51f682&=&width=462&height=662);
+        background-color: gray;
+        background-position: center;
+        background-size: cover;
+        margin: 0px auto;
+        /* box-shadow: -0.063rem 0.063rem 1.25rem 0.063rem var(--yellow); */
+    }
+    
+    div.img#pembahasan2 {
+        height: 35vh;
+        width: 60vw;
+        border-radius: 5%;
+        background-image: url(https://media.discordapp.net/attachments/1156569141449326616/1157321411153645689/Coroflot_Design_Jobs__Portfolios.jpeg?ex=65182f0e&is=6516dd8e&hm=c5d94ce37661935c0601258f24acd7002d1a123402efec49f50edf7cd1899d66&=&width=472&height=662);
+        background-color: gray;
+        background-position: center;
+        background-size: cover;
+        margin: 0px auto;
+        /* box-shadow: -0.063rem 0.063rem 1.25rem 0.063rem var(--yellow); */
+    }
+
+    
+    section.pembahasan div.jawaban div.text {
+        /* background-color: yellowgreen; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px auto;
+        width: 90%;
+    }
+    section.pembahasan div.jawaban div.text p{
+        font-size: 1rem;
+        text-align: justify;
+        font-weight: 600;
+        text-wrap: wrap;
+    }
+    
+    section.pembahasan div.jawaban-2 div.text {
+        /* background-color: yellowgreen; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px auto;
+        width: 90%;
+    }
+    section.pembahasan div.jawaban-2 div.text p{
+        font-size: 1rem;
+        text-align: justify;
+        font-weight: 600;
+        text-wrap: wrap;
+    }
+}
